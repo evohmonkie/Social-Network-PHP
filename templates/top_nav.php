@@ -10,13 +10,13 @@
 				<span class="icon-bar"></span>
 			</button>
 		</div>
-		<a class="navbar-brand" href="#">SocialNetwork.com</a>
+		<a class="navbar-brand" href="index.php">SocialNetwork.com</a>
 
 		<!-- Collection of main nav links -->
 		<div class="collapse navbar-collapse" id="top-nav">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-				<li><a href="#">Link 1</a></li>
+				<li class="active"><a href="login.php">Login <span class="sr-only">(current)</span></a></li>
+				<li><a href="signup.php">Register</a></li>
 				<li><a href="#">Link 2</a></li>
 				<li><a href="#">Link 3</a></li>
 			</ul>

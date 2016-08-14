@@ -1,3 +1,10 @@
+body {
+/*	background-image: url('../img/batman.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;*/
+	background-color: #ccc;
+}
+
 #footer {
 	text-align: center;
 	font-size: 12px;
