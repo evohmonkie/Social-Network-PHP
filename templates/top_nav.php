@@ -17,7 +17,7 @@
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="login.php">Login <span class="sr-only">(current)</span></a></li>
 				<li><a href="signup.php">Register</a></li>
-				<li><a href="#">Link 2</a></li>
+				<li><a href="logout.php">Logout</a></li>
 				<li><a href="#">Link 3</a></li>
 			</ul>
 			<form class="navbar-form navbar-left">

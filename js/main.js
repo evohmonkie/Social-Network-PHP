@@ -96,3 +96,34 @@ function signup(){
 		a.send("u="+u+"&e="+e+"&p="+p1+"&g="+g+"&c="+c);	
 	}
 }
+
+/********************** 
+	Login Functions
+***********************/
+function login() {
+	var e = _('inputEmail').value;
+	var p = _('inputPassword').value;
+	var save = _('remember-me').value;
+	var status = _('login-msg');
+
+	console.log(save);
+
+	if (e == "" || p == "") {
+		status.innerHTML = "Please fill in form";
+	} else {
+		_('login-btn').style.display = "none";
+		status.innerHTML = "please wait...";
+		var a = ajax("POST", "login.php");
+		a.onreadystatechange = function() {
+			if (ajaxReturn(a) == true) {
+				if (a.responseText.trim() == "login_failed") {
+					status.innerHTML = "Login failed, please try again";
+					_('login-btn').style.display = "block";
+				} else {
+					window.location = "user.php?="+a.responseText;
+				}
+			}
+		}
+		a.send("e="+e+"&p="+p+"&save="+save);
+	}
+}

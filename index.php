@@ -12,6 +12,13 @@
 </head>
 <body>
 	<?php include_once('templates/top_nav.php'); ?>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>SocialNetwork</h1>
+			<p>Learn more today or register</p>
+			<p><a class="btn btn-primary btn-lg" href="signup.php" role="button">Register</a></p>
+		</div>
+	</div>
 </body>
 <footer>
 	<?php include_once('templates/footer_page.php'); ?>
