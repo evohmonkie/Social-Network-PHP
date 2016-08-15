@@ -67,7 +67,7 @@ if (isset($_POST['e'])) {
 	<?php include_once('templates/top_nav.php'); ?>
 
 	<!-- Login Form -->
-	<div class="container col-md-2 col-md-offset-5">
+	<div class="container col-md-4 col-md-offset-4">
 		<form class="form-signin">
 			<h2 class="form-signin-heading">Please Sign In</h2>
 			<label class="sr-only" for="inputEmail">Email Address</label>

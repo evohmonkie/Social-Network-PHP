@@ -141,48 +141,70 @@ if(isset($_POST['u'])){
 		onkeyup = when user releases a key press
 		onfocus = when user focuses on element
 	-->
-	<form class="col-md-6" id="signup-form">
-		<div class="form-group">
-			<label for="username">Username</label>
-			<input class="form-control" type="text" id="username" placeholder="username" onblur="checkUsername()" onkeyup="restrict("username")" maxlength="16">
-			<span id="username-status"></span>
+	<div class="container">
+		<div class="page-header">
+			<h1>Register Account</h1>
 		</div>
-		<div class="form-group">
-			<label for="password1">Create Password</label>
-			<input class="form-control" type="password" id="password1" placeholder="password" onfocus="emptyElement('form-status')" maxlength="16">
-		</div>
-		<div class="form-group">
-			<label for="password2">Confirm Password</label>
-			<input class="form-control" type="password" id="password2" placeholder="password" onfocus="emptyElement('form-status')" maxlength="16">
-		</div>
-		<div class="form-group">
-			<label for="email">Email Address</label>
-			<input class="form-control" type="email" id="email" placeholder="name@example.com" onfocus="emptyElement('form-status')" onkeyup="restrict('email')" maxlength="88">
-		</div>
-		<div class="form-group">
-			<label for="gender">Gender</label>
-			<select class="form-control" id="gender">
-				<option value=""></option>
-				<option value="m">Male</option>
-				<option value="f">Female</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<label for="country">Country</label>
-			<select class="form-control" id="country">
-				<option value="usa">United States</option>
-			</select>
-		</div>
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" id="terms"> Check if you agree.
-			</label>
-		</div>
+	</div>
 
-	</form>
-		<span id="form-status"></span><!-- Returns message when user clicks form --> 
-		<button class="btn btn-primary" id="signup-btn" onclick="signup()">Create Account</button>
+	<div class="container col-md-8 col-md-offset-2">
+		<div id="form-status"></div><!-- Returns message when user clicks form --> 
+		<form class="form-horizontal" id="signup-form">
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="username">Username</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" id="username" placeholder="username" onblur="checkUsername()" onkeyup="restrict("username")" maxlength="16">
+					<span id="username-status"></span>
+				</div>		
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="password1">Create Password</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="password" id="password1" placeholder="password" onfocus="emptyElement('form-status')" maxlength="16">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="password2">Confirm Password</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="password" id="password2" placeholder="password" onfocus="emptyElement('form-status')" maxlength="16">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="email">Email Address</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="email" id="email" placeholder="name@example.com" onfocus="emptyElement('form-status')" onkeyup="restrict('email')" maxlength="88">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="gender">Gender</label>
+				<div class="col-sm-10">
+					<select class="form-control" id="gender">
+						<option value=""></option>
+						<option value="m">Male</option>
+						<option value="f">Female</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="country">Country</label>
+				<div class="col-sm-10">
+					<select class="form-control" id="country">
+						<option value="usa">United States</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label"></label>
+				<div class="col-sm-10">
+					<input type="checkbox" id="terms"> Check if you agree.</input>
+				</div>
+			</div>
+		</form>
 
+		<div class="col-md-2 col-md-offset-10">
+			<button class="btn btn-primary" id="signup-btn" onclick="signup()">Create Account</button>
+		</div>
+	</div>
 </body>
 <footer>
 	<?php include_once('templates/footer_page.php'); ?>
